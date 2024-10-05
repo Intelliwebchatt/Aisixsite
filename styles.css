@@ -1,0 +1,251 @@
+/* Fonts */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    padding: 1em 2em;
+    background-color: #fff;
+    color: #764ba2;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin-top: -5em;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    width: 150px;
+    height: 150px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-around;
+    padding: 5em 2em;
+    background-color: #f9f9f9;
+}
+
+.service-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.service-card h2 {
+    margin-bottom: 1em;
+}
+
+.service-card p {
+    font-size: 1em;
+}
+
+/* Slider Section */
+.slider {
+    padding: 5em 2em;
+    text-align: center;
+}
+
+.slider h2 {
+    margin-bottom: 2em;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slider-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 5em 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 2em;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.testimonial {
+    min-width: 300px;
+    margin: 0 1em;
+    scroll-snap-align: center;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.testimonial h3 {
+    font-weight: normal;
+}
+
+/* Payment Section */
+.payment {
+    padding: 5em 2em;
+    text-align: center;
+}
+
+.payment h2 {
+    margin-bottom: 2em;
+}
+
+.payment form {
+    display: inline-block;
+    text-align: left;
+}
+
+.payment input {
+    display: block;
+    margin: 0.5em 0;
+    padding: 1em;
+    width: 300px;
+}
+
+.payment button {
+    padding: 1em 2em;
+    background-color: #764ba2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment button:hover {
+    background-color: #667eea;
+}
+
+/* Contact Form */
+#contact {
+    padding: 5em 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 2em;
+}
+
+#contact form {
+    display: inline-block;
+    text-align: left;
+}
+
+#contact input, #contact textarea {
+    display: block;
+    margin: 0.5em 0;
+    padding: 1em;
+    width: 300px;
+}
+
+#contact button {
+    padding: 1em 2em;
+    background-color: #764ba2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #667eea;
+}
+
+/* Footer */
+footer {
+    padding: 2em;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.social-media a img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+footer p {
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+
+    .testimonial-carousel {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        margin-bottom: 2em;
+    }
+}
