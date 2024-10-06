@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Ai xsite - AI Consulting, News, and Info</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Placeholder Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="path/to/placeholder-favicon.ico">
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet">
@@ -16,10 +16,10 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
+        <div class="overlay"></div>
         <div class="hero-content">
             <h1>Ai xsite</h1>
             <p>AI Consulting, News, and Info</p>
-            <img src="https://www.dropbox.com/scl/fi/22wvs62gq7epka0khiqsn/2024-imsmke.gif?rlkey=r785es94xwje13saegiw3q2gk&dl=1" alt="Dynamic AI Visualization" style="width: 100%; height: auto; max-height: 100vh;">
             <a href="#contact" class="cta-button">Book Now</a>
         </div>
     </section>
@@ -48,10 +48,12 @@
     <!-- Before-and-After Slider -->
     <section class="slider">
         <h2>Our Work</h2>
-        <!-- Placeholder Slider -->
-        <div class="slider-container">
+        <div class="ba-slider">
             <img src="path/to/placeholder-before.jpg" alt="Before">
-            <img src="path/to/placeholder-after.jpg" alt="After">
+            <div class="resize">
+                <img src="path/to/placeholder-after.jpg" alt="After">
+            </div>
+            <span class="handle"></span>
         </div>
     </section>
 
@@ -67,31 +69,29 @@
                 <p>"Their insights into AI trends are unmatched."</p>
                 <h3>- Jane Smith, CTO of InnovateX</h3>
             </div>
-            <!-- Add more testimonials as needed -->
+            <!-- Additional testimonials can be added here -->
         </div>
     </section>
 
     <!-- Payment Section -->
     <section class="payment">
         <h2>Secure Payment</h2>
-        <!-- Placeholder Payment Form -->
-        <form action="https://placeholder-payment-endpoint.com/charge" method="POST">
-            <!-- Payment fields -->
-            <input type="text" name="cardnumber" placeholder="Card Number">
-            <input type="text" name="expdate" placeholder="MM/YY">
-            <input type="text" name="cvc" placeholder="CVC">
+        <!-- Stripe Payment Form -->
+        <form id="payment-form">
+            <div id="card-element"><!--Stripe.js injects the Card Element--></div>
             <button type="submit">Pay Now</button>
+            <div id="card-errors" role="alert"></div>
         </form>
     </section>
 
     <!-- Contact Form -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <!-- Placeholder Contact Form -->
+        <!-- Contact Form -->
         <form action="https://placeholder-contact-endpoint.com/submit" method="POST">
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="email" name="email" placeholder="Your Email">
-            <textarea name="message" placeholder="Your Message"></textarea>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -99,15 +99,17 @@
     <!-- Footer -->
     <footer>
         <div class="social-media">
-            <!-- Placeholder Social Media Links -->
-            <a href="#"><img src="path/to/placeholder-facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="path/to/placeholder-twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="path/to/placeholder-linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://facebook.com/yourprofile"><img src="path/to/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com/yourprofile"><img src="path/to/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://linkedin.com/in/yourprofile"><img src="path/to/linkedin-icon.png" alt="LinkedIn"></a>
         </div>
         <p>&copy; 2023 Ai xsite. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts.js"></script>
+    <!-- Include Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
 </body>
 </html>
