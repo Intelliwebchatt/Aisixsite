@@ -2,114 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ai xsite - AI Consulting, News, and Info</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai xsite - AI Consulting, News, and Info</title>
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Ai xsite offers premier AI consulting services, the latest AI news, and informative blogs to keep you ahead in the industry.">
+    <meta name="keywords" content="AI, Artificial Intelligence, Consulting, News, Blog">
     <!-- Favicon -->
-    <link rel="icon" href="path/to/placeholder-favicon.ico">
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet">
-    <!-- CSS Stylesheet -->
+    <link rel="icon" href="images/favicon-placeholder.png" type="image/png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Chatbot Integration -->
-    <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="36738"></script>
+    <!-- External Libraries CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
 </head>
 <body>
+    <!-- Chatbot Script -->
+    <script>
+        // Placeholder for chatbot integration
+        var botId = 36738;
+        // Insert chatbot script here
+    </script>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="overlay"></div>
+    <section id="hero">
         <div class="hero-content">
             <h1>Ai xsite</h1>
             <p>AI Consulting, News, and Info</p>
-            <a href="#contact" class="cta-button">Book Now</a>
+            <a href="#contact" class="btn">Book Now</a>
         </div>
+        <div class="scroll-down"></div>
     </section>
 
-    <!-- Profile Image and Typography -->
-    <section class="profile">
-        <img src="path/to/placeholder-profile-image.jpg" alt="Profile Image">
+    <!-- Profile Image/Logo -->
+    <section id="profile">
+        <img src="images/logo-placeholder.png" alt="Ai xsite Logo">
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="service-card">
-            <h2>Consulting</h2>
-            <p>Expert AI consulting services to elevate your business.</p>
-        </div>
-        <div class="service-card">
-            <h2>News</h2>
-            <p>Stay updated with the latest AI industry news.</p>
-        </div>
-        <div class="service-card">
-            <h2>Blog</h2>
-            <p>Insights and articles on AI trends and technologies.</p>
+    <section id="about">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Consulting</h3>
+                <p>Expert advice to drive your AI initiatives.</p>
+            </div>
+            <div class="service-card">
+                <h3>News</h3>
+                <p>Stay updated with the latest in AI technology.</p>
+            </div>
+            <div class="service-card">
+                <h3>Blog</h3>
+                <p>Insights and articles from industry leaders.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Before-and-After Slider -->
-    <section class="slider">
-        <h2>Our Work</h2>
+    <!-- Before-and-After Image Slider -->
+    <section id="slider">
+        <h2>Transformations</h2>
         <div class="ba-slider">
-            <img src="path/to/placeholder-before.jpg" alt="Before">
-            <div class="resize">
-                <img src="path/to/placeholder-after.jpg" alt="After">
-            </div>
-            <span class="handle"></span>
+            <img src="images/before-placeholder.jpg" alt="Before">
+            <div class="handle"></div>
+            <img src="images/after-placeholder.jpg" alt="After">
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- Testimonials Carousel -->
+    <section id="testimonials">
         <h2>What Our Clients Say</h2>
-        <div class="testimonial-carousel">
-            <div class="testimonial">
-                <p>"Ai xsite transformed our business with their expert consulting!"</p>
-                <h3>- John Doe, CEO of TechCorp</h3>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Testimonial Slide 1 -->
+                <div class="swiper-slide">
+                    <p>"Ai xsite transformed our business with their cutting-edge AI solutions."</p>
+                    <h4>- Client A</h4>
+                </div>
+                <!-- Testimonial Slide 2 -->
+                <div class="swiper-slide">
+                    <p>"Their insights into AI trends are unparalleled."</p>
+                    <h4>- Client B</h4>
+                </div>
+                <!-- Add more slides as needed -->
             </div>
-            <div class="testimonial">
-                <p>"Their insights into AI trends are unmatched."</p>
-                <h3>- Jane Smith, CTO of InnovateX</h3>
-            </div>
-            <!-- Additional testimonials can be added here -->
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
-    <!-- Payment Section -->
-    <section class="payment">
+    <!-- Secure Payment Section -->
+    <section id="payment">
         <h2>Secure Payment</h2>
-        <!-- Stripe Payment Form -->
         <form id="payment-form">
-            <div id="card-element"><!--Stripe.js injects the Card Element--></div>
-            <button type="submit">Pay Now</button>
-            <div id="card-errors" role="alert"></div>
+            <!-- Stripe Elements will be inserted here -->
+            <div id="card-element"><!-- Placeholder --></div>
+            <button type="submit" class="btn">Pay Now</button>
         </form>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <!-- Contact Form -->
-        <form action="https://placeholder-contact-endpoint.com/submit" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+            <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="social-media">
-            <a href="https://facebook.com/yourprofile"><img src="path/to/facebook-icon.png" alt="Facebook"></a>
-            <a href="https://twitter.com/yourprofile"><img src="path/to/twitter-icon.png" alt="Twitter"></a>
-            <a href="https://linkedin.com/in/yourprofile"><img src="path/to/linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#" aria-label="Facebook"><img src="images/facebook-placeholder.png" alt="Facebook"></a>
+            <a href="#" aria-label="Twitter"><img src="images/twitter-placeholder.png" alt="Twitter"></a>
+            <a href="#" aria-label="LinkedIn"><img src="images/linkedin-placeholder.png" alt="LinkedIn"></a>
         </div>
         <p>&copy; 2023 Ai xsite. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
-    <!-- Include Stripe.js -->
+    <!-- External Libraries JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
+    <!-- Stripe JS -->
     <script src="https://js.stripe.com/v3/"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
