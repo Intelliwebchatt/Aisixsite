@@ -1,7 +1,8 @@
-Smooth Scrolling for Internal Links
+// Smooth Scrolling for Internal Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -49,8 +50,9 @@ slider.addEventListener('mousemove', (e) => {
     beforeImage.style.clip = `rect(0px, ${x}px, ${slider.offsetHeight}px, 0px)`;
 });
 
-// Stripe Payment Integration
-var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your public key
+// Stripe Payment Integration 
+// (Make sure to replace 'pk_test_XXXXXXXXXXXXXXXXXXXXXXXX' with your actual Stripe public key)
+var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX');
 var elements = stripe.elements();
 
 var style = {
@@ -70,15 +72,14 @@ var style = {
     },
 };
 
-var card = elements.create('card', { style: style });
+var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
 var form = document.getElementById('payment-form');
-
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    stripe.createToken(card).then(function(result) {
+    stripe.createToken(card).then(function (result) {
         if (result.error) {
             // Display error.message in your UI
             alert(result.error.message);
