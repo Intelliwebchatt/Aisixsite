@@ -117,13 +117,15 @@ body {
 /* Profile Section */
 #profile {
     text-align: center;
-    padding: 50px 0;
+    padding: 70px 0; /* Increased padding for larger logo */
     background-color: #000;
 }
 
 #profile img {
-    width: 150px;
+    width: 300px; /* Increased from 150px to 300px */
     height: auto;
+    border-radius: 10px; /* Optional: Adds slight rounding to the logo */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Adds depth to the logo */
 }
 
 /* About Section */
@@ -189,8 +191,10 @@ body {
 .ba-slider {
     position: relative;
     width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
+    border: 2px solid #fff; /* Optional: Adds a border around the slider */
 }
 
 .ba-slider img {
@@ -224,6 +228,7 @@ body {
 
 .swiper-container {
     width: 80%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -289,6 +294,7 @@ body {
 
 #contact form {
     width: 500px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -340,5 +346,10 @@ footer p {
 
     #contact form, #payment-form {
         width: 90%;
+    }
+
+    /* Adjust logo size on smaller screens */
+    #profile img {
+        width: 200px; /* Reduced from 300px to 200px */
     }
 }
