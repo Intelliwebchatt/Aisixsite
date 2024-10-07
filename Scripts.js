@@ -3,9 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
@@ -44,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('mousemove', (e) => {
             if (!isActive) return;
 
-            let x = e.pageX - slider.getBoundingClientRect().left;
+            let rect = slider.getBoundingClientRect();
+            let x = e.clientX - rect.left;
             let width = slider.offsetWidth;
 
             if (x < 0) x = 0;
