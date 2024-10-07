@@ -1,388 +1,141 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelliai Marketing - Digital Marketing & SEO</title>
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
+    <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- External Libraries CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Chatbot Script -->
+    <script>
+        // Placeholder for chatbot integration
+        var botId = 36738;
+        // Insert chatbot script here
+    </script>
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Hero Section with Black Background and Wavy Water GIF -->
+    <section id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div> <!-- Optional: Adds a dark overlay for better text visibility -->
+        <header id="header-content">
+            <h1>Intelliai Marketing</h1>
+            <a href="#contact" class="btn">Book Now</a>
+        </header>
+    </section>
 
-/* Body */
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    background-color: #000; /* Black background */
-    scroll-behavior: smooth;
-}
+    <!-- Profile Image/Logo -->
+    <section id="profile">
+        <img src="images/logo.jpg" alt="Intelliai Marketing Logo">
+    </section>
 
-/* Hero Section with GIF Background */
-#hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+    <!-- About Section -->
+    <section id="about">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Custom Websites for Luxury Brands</h3>
+                <p>Bespoke web development tailored to your luxury brand's needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Pre-designed Landing Pages</h3>
+                <p>Proven pre-built sites customized with your branding.</p>
+            </div>
+            <div class="service-card">
+                <h3>Advanced Chatbots</h3>
+                <p>Intelligent chatbots to enhance customer engagement.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Consulting</h3>
+                <p>Expert advice to leverage AI in your business strategies.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Blog and News</h3>
+                <p>Stay updated with the latest trends in AI technology.</p>
+            </div>
+        </div>
+    </section>
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://www.dropbox.com/scl/fi/tpv2t18cru3uhpjf48w7s/MXcp.gif?rlkey=oi1xk6qnxevtnezume8k4zlg3&dl=1'); /* Direct link to GIF */
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
-    opacity: 1;
-}
+    <!-- Before-and-After Image Slider -->
+    <section id="slider">
+        <h2>Our Transformations</h2>
+        <div class="ba-slider">
+            <img src="images/before-placeholder.jpg" alt="Before">
+            <div class="handle"></div>
+            <img src="images/after-placeholder.jpg" alt="After">
+        </div>
+    </section>
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Optional: Adds a dark overlay for better text visibility */
-    z-index: -1;
-}
+    <!-- Testimonials Carousel -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Testimonial Slide 1 -->
+                <div class="swiper-slide">
+                    <p>"Intelliai Marketing revolutionized our online presence with a stunning website."</p>
+                    <h4>- Luxury Brand CEO</h4>
+                </div>
+                <!-- Testimonial Slide 2 -->
+                <div class="swiper-slide">
+                    <p>"Their advanced chatbot increased our customer engagement by 50%."</p>
+                    <h4>- E-commerce Director</h4>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 
-/* Header Content Below the Video */
-#header-content {
-    position: relative;
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #000; /* Ensures the header has a solid background */
-    z-index: 1;
-}
+    <!-- Secure Payment Section -->
+    <section id="payment">
+        <h2>Secure Payment</h2>
+        <form id="payment-form">
+            <!-- Stripe Elements will be inserted here -->
+            <div id="card-element"><!-- Placeholder --></div>
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </section>
 
-#header-content h1 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 3em;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-    color: #fff;
-}
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+            <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
 
-#header-content p {
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    color: #ddd;
-}
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/yourprofile" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/yourprofile" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
+    </footer>
 
-.btn {
-    padding: 15px 30px;
-    background-color: #1a1a1a; /* Slightly lighter black */
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #333;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Scroll Down Indicator */
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 30px;
-    height: 50px;
-    margin-left: -15px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    z-index: 1;
-}
-
-.scroll-down::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: #fff;
-    margin-left: -3px;
-    border-radius: 50%;
-    animation: scroll 2s infinite;
-}
-
-@keyframes scroll {
-    0% {
-        opacity: 0;
-        top: 10px;
-    }
-    50% {
-        opacity: 1;
-        top: 25px;
-    }
-    100% {
-        opacity: 0;
-        top: 40px;
-    }
-}
-
-/* Profile Section */
-#profile {
-    text-align: center;
-    padding: 70px 0; /* Increased padding for larger logo */
-    background-color: #000;
-}
-
-#profile img {
-    width: 300px; /* Increased from 150px to 300px */
-    height: auto;
-    border-radius: 10px; /* Adds slight rounding to the logo */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Adds depth to the logo */
-}
-
-/* About Section */
-#about {
-    background: linear-gradient(135deg, #1a1a1a, #333333); /* Gradient to create depth */
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#about h2 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 2.5em;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.service-card {
-    background: #1a1a1a; /* Slightly lighter black */
-    width: 280px;
-    margin: 15px;
-    padding: 30px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Heavy shadow */
-    transition: transform 0.3s ease;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255,255,255,0.1);
-}
-
-.service-card h3 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.service-card p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #ddd;
-}
-
-/* Before-and-After Slider */
-#slider {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #000;
-}
-
-#slider h2 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.ba-slider {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 2px solid #fff; /* Adds a border around the slider */
-    border-radius: 10px;
-}
-
-.ba-slider img {
-    width: 100%;
-    display: block;
-}
-
-.ba-slider .handle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 5px;
-    height: 100%;
-    background: #fff;
-    cursor: ew-resize;
-    transform: translateX(-50%);
-}
-
-/* Testimonials */
-#testimonials {
-    background: linear-gradient(135deg, #1a1a1a, #333333);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#testimonials h2 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.swiper-container {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.swiper-slide {
-    font-size: 1.2em;
-    color: #fff;
-    padding: 20px;
-    background-color: #1a1a1a;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    border-radius: 5px;
-}
-
-.swiper-slide h4 {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Payment Section */
-#payment {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #000;
-}
-
-#payment h2 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-#payment-form {
-    width: 300px;
-    margin: 0 auto;
-}
-
-#card-element {
-    padding: 15px;
-    border: 1px solid #fff;
-    margin-bottom: 20px;
-    background-color: #1a1a1a;
-    color: #fff;
-    border-radius: 5px;
-}
-
-#payment-form .btn {
-    width: 100%;
-}
-
-/* Contact Section */
-#contact {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #000;
-}
-
-#contact h2 {
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-#contact form {
-    width: 500px;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-#contact input, #contact textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #fff;
-    background-color: #1a1a1a;
-    color: #fff;
-    border-radius: 5px;
-}
-
-#contact .btn {
-    width: 100%;
-}
-
-/* Footer */
-footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-footer .social-media {
-    margin-bottom: 20px;
-}
-
-footer .social-media a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-media img {
-    width: 30px;
-    height: auto;
-}
-
-footer p {
-    font-size: 0.9em;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #contact form, #payment-form {
-        width: 90%;
-    }
-
-    /* Adjust logo size on smaller screens */
-    #profile img {
-        width: 200px; /* Reduced from 300px to 200px */
-    }
-
-    /* Adjust header content on smaller screens */
-    #header-content h1 {
-        font-size: 2.5em;
-    }
-
-    #header-content p {
-        font-size: 1.2em;
-    }
-}
+    <!-- External Libraries JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
