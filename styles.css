@@ -26,9 +26,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center; /* Added missing semicolon */
+}
 
- * https://itsourcecode.com/free-projects/python-projects/clinic-management-system-project-in-django-with-source-code/
- * https://github.com/MuhammadAli120/simple-website
- * https://github.com/LeenhCraft/plantillas_blog
- * https://github.com/mdogan89/portfolio_neos
+/* Additional CSS (if any) */
+/* ... */
