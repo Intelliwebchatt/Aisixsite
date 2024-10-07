@@ -1,313 +1,91 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+// Smooth Scrolling for Internal Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// Testimonials Carousel Initialization
+var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-/* Body */
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #000;
-    scroll-behavior: smooth;
-}
+// Before-and-After Slider Functionality
+const slider = document.querySelector('.ba-slider');
+const beforeImage = slider.querySelector('img:first-child');
+const handle = slider.querySelector('.handle');
 
-/* Hero Section */
-#hero {
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, #C0C0C0, #A9A9A9);
-    overflow: hidden;
-}
+let isActive = false;
 
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('videos/background-video-placeholder.mp4') no-repeat center center/cover;
-    opacity: 0.5;
-}
+slider.addEventListener('mousedown', () => {
+    isActive = true;
+});
 
-.hero-content {
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-}
+slider.addEventListener('mouseup', () => {
+    isActive = false;
+});
 
-.hero-content h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 4em;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-}
+slider.addEventListener('mouseleave', () => {
+    isActive = false;
+});
 
-.hero-content p {
-    font-size: 1.5em;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-}
+slider.addEventListener('mousemove', (e) => {
+    if (!isActive) return;
+    let x = e.pageX - slider.offsetLeft;
+    let width = slider.offsetWidth;
+    if (x < 0) x = 0;
+    if (x > width) x = width;
+    handle.style.left = x + 'px';
+    beforeImage.style.clip = `rect(0px, ${x}px, ${slider.offsetHeight}px, 0px)`;
+});
 
-.btn {
-    padding: 15px 30px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    transition: all 0.3s ease;
-}
+// Stripe Payment Integration
+var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your public key
+var elements = stripe.elements();
 
-.btn:hover {
-    background-color: #fff;
-    color: #000;
-    transform: scale(1.05);
-}
+var style = {
+    base: {
+        color: '#fff',
+        fontFamily: '"Open Sans", sans-serif',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+            color: '#888',
+        },
+        backgroundColor: '#1a1a1a',
+    },
+    invalid: {
+        color: '#fa755a',
+        iconColor: '#fa755a',
+    },
+};
 
-/* Scroll Down Indicator */
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 30px;
-    height: 50px;
-    margin-left: -15px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-}
+var card = elements.create('card', { style: style });
+card.mount('#card-element');
 
-.scroll-down::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: #fff;
-    margin-left: -3px;
-    border-radius: 50%;
-    animation: scroll 2s infinite;
-}
+var form = document.getElementById('payment-form');
 
-@keyframes scroll {
-    0% {
-        opacity: 0;
-        top: 10px;
-    }
-    50% {
-        opacity: 1;
-        top: 25px;
-    }
-    100% {
-        opacity: 0;
-        top: 40px;
-    }
-}
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-/* Profile Section */
-#profile {
-    text-align: center;
-    padding: 50px 0;
-}
-
-#profile img {
-    width: 150px;
-    height: auto;
-}
-
-/* About Section */
-#about {
-    background: linear-gradient(135deg, #C0C0C0, #A9A9A9);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#about h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-}
-
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.service-card {
-    background: #fff;
-    width: 300px;
-    margin: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-card h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-/* Before-and-After Slider */
-#slider {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#slider h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-.ba-slider {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.ba-slider img {
-    width: 100%;
-    display: block;
-}
-
-.ba-slider .handle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 5px;
-    height: 100%;
-    background: #000;
-    cursor: ew-resize;
-}
-
-/* Testimonials */
-#testimonials {
-    background-color: #f5f5f5;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#testimonials h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-.swiper-container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.swiper-slide {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.swiper-slide h4 {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-/* Payment Section */
-#payment {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#payment h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-#payment-form {
-    width: 300px;
-    margin: 0 auto;
-}
-
-#card-element {
-    padding: 15px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-}
-
-#payment-form .btn {
-    width: 100%;
-}
-
-/* Contact Section */
-#contact {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#contact h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-#contact form {
-    width: 500px;
-    margin: 0 auto;
-}
-
-#contact input, #contact textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-}
-
-#contact .btn {
-    width: 100%;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-footer .social-media {
-    margin-bottom: 20px;
-}
-
-footer .social-media a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-media img {
-    width: 30px;
-    height: auto;
-}
-
-footer p {
-    font-size: 0.9em;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+    stripe.createToken(card).then(function(result) {
+        if (result.error) {
+            // Display error.message in your UI
+            alert(result.error.message);
+        } else {
+            // Send the token to your server
+            // Placeholder for server integration
+            alert('Payment successful! Token ID: ' + result.token.id);
+        }
+    });
+});
