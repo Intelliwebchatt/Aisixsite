@@ -1,109 +1,81 @@
-<!-- Include this in your HTML file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website Title</title>
+    <!-- Include the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
 
-<!-- Include Swiper CSS and JS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- Add more navigation items as needed -->
+        </ul>
+    </nav>
 
-<!-- Include Stripe JS -->
-<script src="https://js.stripe.com/v3/"></script>
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- Your hero content here -->
+        <h1>Welcome to Our Website</h1>
+    </section>
 
-<!-- Your custom JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth Scrolling for Internal Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Some information about your website.</p>
+    </section>
 
-    // Testimonials Carousel Initialization
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 5000,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+    <!-- Testimonials Carousel -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1 Content</div>
+                <div class="swiper-slide">Slide 2 Content</div>
+                <div class="swiper-slide">Slide 3 Content</div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 
-    // Before-and-After Slider Functionality
-    const slider = document.querySelector('.ba-slider');
-    if (slider) {
-        const beforeImage = slider.querySelector('img:first-child');
-        const handle = slider.querySelector('.handle');
+    <!-- Before-and-After Slider -->
+    <section id="before-after">
+        <h2>Before and After</h2>
+        <div class="ba-slider">
+            <img src="before.jpg" alt="Before Image">
+            <img src="after.jpg" alt="After Image">
+            <div class="handle"></div>
+        </div>
+    </section>
 
-        let isActive = false;
+    <!-- Stripe Payment Form -->
+    <section id="payment">
+        <h2>Make a Payment</h2>
+        <form id="payment-form">
+            <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+            </div>
+            <!-- Used to display form errors -->
+            <div id="card-errors" role="alert"></div>
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
 
-        slider.addEventListener('mousedown', () => {
-            isActive = true;
-        });
-
-        slider.addEventListener('mouseup', () => {
-            isActive = false;
-        });
-
-        slider.addEventListener('mouseleave', () => {
-            isActive = false;
-        });
-
-        slider.addEventListener('mousemove', (e) => {
-            if (!isActive) return;
-            let x = e.pageX - slider.offsetLeft;
-            let width = slider.offsetWidth;
-            if (x < 0) x = 0;
-            if (x > width) x = width;
-            handle.style.left = x + 'px';
-            beforeImage.style.clip = `rect(0px, ${x}px, ${slider.offsetHeight}px, 0px)`;
-        });
-    }
-
-    // Stripe Payment Integration
-    var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your public key
-    var elements = stripe.elements();
-
-    var style = {
-        base: {
-            color: '#fff',
-            fontFamily: '"Open Sans", sans-serif',
-            fontSmoothing: 'antialiased',
-            fontSize: '16px',
-            '::placeholder': {
-                color: '#888',
-            },
-            backgroundColor: '#1a1a1a',
-        },
-        invalid: {
-            color: '#fa755a',
-            iconColor: '#fa755a',
-        },
-    };
-
-    var card = elements.create('card', { style: style });
-    card.mount('#card-element');
-
-    var form = document.getElementById('payment-form');
-
-    if (form) {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            stripe.createToken(card).then(function(result) {
-                if (result.error) {
-                    // Display error.message in your UI
-                    alert(result.error.message);
-                } else {
-                    // Send the token to your server
-                    // Placeholder for server integration
-                    alert('Payment successful! Token ID: ' + result.token.id);
-                }
-            });
-        });
-    }
-});
-</script>
+    <!-- Include Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Include Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Include your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
