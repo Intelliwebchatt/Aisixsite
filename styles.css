@@ -17,11 +17,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Hero Section with Black Background and New Wavy Water GIF */
+/* Hero Section with Black Background and Wavy Water GIF */
 #hero {
     position: relative;
     height: 60vh; /* Adjusted height to accommodate header content */
-    background-color: #000; /* Black background */
+    background-color: #000;
     overflow: hidden;
 }
 
@@ -32,7 +32,7 @@ body {
     transform: translateX(-50%);
     width: 100%;
     height: auto;
-    background-image: url('https://www.dropbox.com/scl/fi/22wvs62gq7epka0khiqsn/2024-imsmke.gif?rlkey=r785es94xwje13saegiw3q2gk&st=pj7oz4g2&dl=1'); /* Direct link to new GIF */
+    background-image: url('https://www.dropbox.com/scl/fi/22wvs62gq7epka0khiqsn/2024-imsmke.gif?rlkey=r785es94xwje13saegiw3q2gk&dl=1'); /* Updated GIF link */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,14 +62,22 @@ body {
 
 #header-content h1 {
     font-family: 'Playfair Display', serif; /* Elegant font for headings */
-    font-size: 3em;
+    font-size: 4em; /* Increased size */
     letter-spacing: 3px;
     margin-bottom: 20px;
     color: #fff;
 }
 
-/* Removed Subtitle */
+#header-content p {
+    /* Removed Subtitle */
+}
 
+/* Reposition "Book Now" Button */
+#book-now-button {
+    margin-top: 20px; /* Add spacing above the button */
+}
+
+/* General Button Styling */
 .btn {
     padding: 15px 30px;
     background-color: #1a1a1a; /* Slightly lighter black */
@@ -89,19 +97,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Profile Section */
-#profile {
-    text-align: center;
-    padding: 70px 0; /* Increased padding for larger logo */
-    background-color: #000;
-}
-
-#profile img {
-    width: 300px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 10px; /* Adds slight rounding to the logo */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Adds depth to the logo */
-}
+/* Profile Section - Removed */
 
 /* About Section */
 #about {
@@ -330,19 +326,19 @@ footer p {
         width: 90%;
     }
 
-    /* Adjust logo size on smaller screens */
-    #profile img {
-        width: 200px; /* Reduced from 300px to 200px */
-    }
-
-    /* Adjust header content on smaller screens */
+    /* Adjust header text size on smaller screens */
     #header-content h1 {
-        font-size: 2.5em;
+        font-size: 3em; /* Reduced from 4em to fit smaller screens */
     }
 
-    /* Ensure "Book Now" button fits well */
+    /* Adjust "Book Now" button size */
     .btn {
         padding: 10px 20px;
         font-size: 0.9em;
+    }
+
+    /* Adjust position of header content */
+    #header-content {
+        top: 5%; /* Move header text up a bit */
     }
 }
