@@ -21,19 +21,21 @@ body {
 #hero {
     position: relative;
     height: 100vh;
-    background: linear-gradient(135deg, #000000, #1a1a1a); /* Gradient from black to dark gray */
     overflow: hidden;
 }
 
-#hero::before {
-    content: '';
+#background-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('videos/background-video-placeholder.mp4') no-repeat center center/cover;
-    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    transition: 1s opacity;
 }
 
 .hero-content {
@@ -42,6 +44,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
+    z-index: 1;
 }
 
 .hero-content h1 {
