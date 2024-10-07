@@ -15,27 +15,174 @@ body {
     color: #fff;
     background-color: #000;
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 /* Hero Section */
 #hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     background-color: #000;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Added missing semicolon */
+    padding: 20px; /* Added padding for content spacing */
 }
 
-/* Additional CSS */
-/* ... */
+/* Responsive Text */
+#hero h1 {
+    font-size: 3rem;
+    text-align: center;
+}
 
-/* Commented URLs Correctly */
-/*
- * https://itsourcecode.com/free-projects/python-projects/clinic-management-system-project-in-django-with-source-code/
- * https://github.com/MuhammadAli120/simple-website
- * https://github.com/LeenhCraft/plantillas_blog
- * https://github.com/mdogan89/portfolio_neos
-*/
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 80px 5%;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Swiper Styles */
+.swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    margin: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 1rem;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Before-and-After Slider */
+.ba-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.ba-slider img {
+    display: block;
+    width: 100%;
+}
+
+.ba-slider img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Start with half width */
+    overflow: hidden;
+}
+
+.ba-slider .handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+    cursor: ew-resize;
+    z-index: 2;
+}
+
+/* Stripe Payment Form */
+#payment-form {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+#card-element {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#payment-form button {
+    background-color: #fa755a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#payment-form button:hover {
+    background-color: #e6453a;
+}
