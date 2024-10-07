@@ -1,4 +1,123 @@
-CSS (styles.css)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelliai Marketing - Digital Marketing & SEO</title>
+    <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
+    <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
+</head>
+<body>
+    <script>
+        // Placeholder for chatbot integration
+        var botId = 36738;
+        // Insert chatbot script here
+    </script>
+
+    <section id="hero">
+        <div class="hero-overlay"></div> 
+        <header id="header-content" data-aos="fade-down" data-aos-duration="1500">
+            <h1>Intelliai Marketing</h1> 
+        </header>
+        <a href="#contact" class="btn" id="book-now-button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">Book Now</a>
+    </section>
+
+    <section id="about">
+        <h2 data-aos="fade-in">Our Services</h2>
+        <div class="services">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Custom Websites for Luxury Brands</h3>
+                <p>Bespoke web development tailored to your luxury brand's needs.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h3>Pre-designed Landing Pages</h3>
+                <p>Proven pre-built sites customized with your branding.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <h3>Advanced Chatbots</h3>
+                <p>Intelligent chatbots to enhance customer engagement.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <h3>AI Consulting</h3>
+                <p>Expert advice to leverage AI in your business strategies.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                <h3>AI Blog and News</h3>
+                <p>Stay updated with the latest trends in AI technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="slider" data-aos="fade-in">
+        <h2>Our Transformations</h2>
+        <div class="ba-slider">
+            <img src="images/before-placeholder.jpg" alt="Website before redesign">
+            <div class="handle"></div>
+            <img src="images/after-placeholder.jpg" alt="Website after redesign">
+        </div>
+    </section>
+
+    <section id="testimonials" data-aos="fade-in">
+        <h2>What Our Clients Say</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p>"Intelliai Marketing revolutionized our online presence with a stunning website."</p>
+                    <h4>- Luxury Brand CEO</h4>
+                </div>
+                <div class="swiper-slide">
+                    <p>"Their advanced chatbot increased our customer engagement by 50%."</p>
+                    <h4>- E-commerce Director</h4>
+                </div>
+                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="payment" data-aos="fade-in">
+        <h2>Secure Payment</h2>
+        <form id="payment-form">
+            <div id="card-element"></div>
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </section>
+
+    <section id="contact" data-aos="fade-in">
+        <h2>Get in Touch</h2>
+        <form action="#" method="POST"> <form> 
+            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+            <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/yourprofile" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/yourprofile" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script> 
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -22,14 +141,41 @@ body {
 #hero {
     position: relative;
     height: 100vh;
-    background-color: #000;
+    background-color: #000; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    background: radial-gradient(ellipse at center, #141414 0%, #000000 100%); 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+#header-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 20px; 
+}
+
+#header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em; 
+    letter-spacing: 2px; 
+    color: #fff;
+    text-shadow: 0px 2px
 
  * https://itsourcecode.com/free-projects/python-projects/clinic-management-system-project-in-django-with-source-code/
  * https://github.com/MuhammadAli120/simple-website
  * https://github.com/LeenhCraft/plantillas_blog
  * https://github.com/mdogan89/portfolio_neos
+ * https://github.com/arvagas/portfolio-v2
