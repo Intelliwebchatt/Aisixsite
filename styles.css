@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 /* Reset */
@@ -17,14 +17,14 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Hero Section */
+/* Hero Section with Video Background */
 #hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-#background-video {
+#hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,30 +34,42 @@ body {
     height: auto;
     z-index: -1;
     transform: translate(-50%, -50%);
-    background-size: cover;
-    transition: 1s opacity;
+    object-fit: cover;
+    opacity: 0.7; /* Adjust opacity as needed */
 }
 
-.hero-content {
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Optional: Adds a dark overlay for better text visibility */
+    z-index: 0;
+}
+
+/* Header Content Below the Video */
+#header-content {
     position: relative;
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
+    padding: 60px 20px;
+    background-color: #000; /* Ensures the header has a solid background */
     z-index: 1;
 }
 
-.hero-content h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 4em;
-    letter-spacing: 5px;
+#header-content h1 {
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
+    font-size: 3em;
+    letter-spacing: 3px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
-.hero-content p {
+#header-content p {
     font-size: 1.5em;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 40px;
+    color: #ddd;
 }
 
 .btn {
@@ -69,6 +81,8 @@ body {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .btn:hover {
@@ -87,6 +101,7 @@ body {
     margin-left: -15px;
     border: 2px solid #fff;
     border-radius: 50px;
+    z-index: 1;
 }
 
 .scroll-down::after {
@@ -127,7 +142,7 @@ body {
 #profile img {
     width: 300px; /* Increased from 150px to 300px */
     height: auto;
-    border-radius: 10px; /* Optional: Adds slight rounding to the logo */
+    border-radius: 10px; /* Adds slight rounding to the logo */
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Adds depth to the logo */
 }
 
@@ -139,10 +154,11 @@ body {
 }
 
 #about h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
     font-size: 2.5em;
     letter-spacing: 3px;
     margin-bottom: 40px;
+    color: #fff;
 }
 
 .services {
@@ -159,6 +175,7 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Heavy shadow */
     transition: transform 0.3s ease;
     color: #fff;
+    border-radius: 5px;
 }
 
 .service-card:hover {
@@ -167,7 +184,7 @@ body {
 }
 
 .service-card h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
     font-size: 1.5em;
     margin-bottom: 20px;
 }
@@ -175,6 +192,7 @@ body {
 .service-card p {
     font-size: 1em;
     line-height: 1.5;
+    color: #ddd;
 }
 
 /* Before-and-After Slider */
@@ -185,7 +203,7 @@ body {
 }
 
 #slider h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #fff;
@@ -197,7 +215,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    border: 2px solid #fff; /* Optional: Adds a border around the slider */
+    border: 2px solid #fff; /* Adds a border around the slider */
+    border-radius: 10px;
 }
 
 .ba-slider img {
@@ -213,6 +232,7 @@ body {
     height: 100%;
     background: #fff;
     cursor: ew-resize;
+    transform: translateX(-50%);
 }
 
 /* Testimonials */
@@ -223,7 +243,7 @@ body {
 }
 
 #testimonials h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #fff;
@@ -258,7 +278,7 @@ body {
 }
 
 #payment h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #fff;
@@ -275,6 +295,7 @@ body {
     margin-bottom: 20px;
     background-color: #1a1a1a;
     color: #fff;
+    border-radius: 5px;
 }
 
 #payment-form .btn {
@@ -289,7 +310,7 @@ body {
 }
 
 #contact h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #fff;
@@ -308,6 +329,7 @@ body {
     border: 1px solid #fff;
     background-color: #1a1a1a;
     color: #fff;
+    border-radius: 5px;
 }
 
 #contact .btn {
@@ -354,5 +376,14 @@ footer p {
     /* Adjust logo size on smaller screens */
     #profile img {
         width: 200px; /* Reduced from 300px to 200px */
+    }
+
+    /* Adjust header content on smaller screens */
+    #header-content h1 {
+        font-size: 2.5em;
+    }
+
+    #header-content p {
+        font-size: 1.2em;
     }
 }
