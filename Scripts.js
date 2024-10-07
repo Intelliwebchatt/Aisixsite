@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     AOS.init({
-        duration: 1000,  // Duration of animations
+        duration: 2000,  // Duration of animations for luxury feel
         once: true       // Only animate elements once as they enter the viewport
     });
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var style = {
         base: {
-            color: '#fff',
+            color: '#c0c0c0',
             fontFamily: '"Open Sans", sans-serif',
             fontSmoothing: 'antialiased',
             fontSize: '16px',
@@ -69,6 +69,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Placeholder for server integration
                 alert('Payment successful! Token ID: ' + result.token.id);
             }
+        });
+    });
+
+    // Fancy animation for buttons
+    document.querySelectorAll(".btn, button").forEach(button => {
+        button.addEventListener('mouseover', function() {
+            this.style.boxShadow = '0 15px 25px rgba(255, 215, 0, 0.6)';
+        });
+        button.addEventListener('mouseout', function() {
+            this.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.4)';
         });
     });
 });
