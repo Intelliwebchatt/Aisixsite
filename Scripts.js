@@ -81,4 +81,11 @@ form.addEventListener('submit', function(event) {
     stripe.createToken(card).then(function(result) {
         if (result.error) {
             // Display error.message in your UI
-            alert
+            alert(result.error.message);
+        } else {
+            // Send the token to your server
+            // Placeholder for server integration
+            alert('Payment successful! Token ID: ' + result.token.id);
+        }
+    });
+});
