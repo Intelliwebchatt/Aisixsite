@@ -8,9 +8,9 @@
     <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
     <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon-placeholder.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -25,19 +25,21 @@
         // Insert chatbot script here
     </script>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Video -->
     <section id="hero">
-        <video autoplay muted loop id="background-video">
-            <source src="https://www.dropbox.com/scl/fi/d3hou7sng39qvthf1p2gy/InShot_20241006_232326492.mp4?rlkey=4wm9u8s9xh6dcwo816ycuq9w6&dl=1" type="video/mp4">
+        <video autoplay muted loop id="hero-video">
+            <source src="videos/background-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="hero-content">
-            <h1>Intelliai Marketing</h1>
-            <p>Digital Marketing & SEO</p>
-            <a href="#contact" class="btn">Book Now</a>
-        </div>
-        <div class="scroll-down"></div>
+        <div class="hero-overlay"></div> <!-- Optional: Adds a dark overlay for better text visibility -->
     </section>
+
+    <!-- Header Content Below the Video -->
+    <header id="header-content">
+        <h1>Intelliai Marketing</h1>
+        <p>Digital Marketing & SEO</p>
+        <a href="#contact" class="btn">Book Now</a>
+    </header>
 
     <!-- Profile Image/Logo -->
     <section id="profile">
@@ -128,9 +130,9 @@
     <!-- Footer -->
     <footer>
         <div class="social-media">
-            <a href="#" aria-label="Facebook"><img src="images/facebook-placeholder.png" alt="Facebook"></a>
-            <a href="#" aria-label="Twitter"><img src="images/twitter-placeholder.png" alt="Twitter"></a>
-            <a href="#" aria-label="LinkedIn"><img src="images/linkedin-placeholder.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/yourprofile" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/yourprofile" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
         </div>
         <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
     </footer>
