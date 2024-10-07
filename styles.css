@@ -17,11 +17,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Hero Section with Black Background and Wavy Water GIF */
+/* Hero Section with Black Background and New Wavy Water GIF */
 #hero {
     position: relative;
     height: 60vh; /* Adjusted height to accommodate header content */
-    background-color: #000;
+    background-color: #000; /* Black background */
     overflow: hidden;
 }
 
@@ -32,7 +32,7 @@ body {
     transform: translateX(-50%);
     width: 100%;
     height: auto;
-    background-image: url('https://www.dropbox.com/scl/fi/et9syqg2vj89fms0yicj8/2024-4_34_12-AM_20241007_051451_0000.gif?rlkey=kdx6f4ew3paqejehh8bdu9j05&dl=1'); /* Direct link to GIF */
+    background-image: url('https://www.dropbox.com/scl/fi/22wvs62gq7epka0khiqsn/2024-imsmke.gif?rlkey=r785es94xwje13saegiw3q2gk&st=pj7oz4g2&dl=1'); /* Direct link to new GIF */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
