@@ -1,71 +1,61 @@
-/* Service Cards */
-.services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    padding: 0 10px;
-}
-
-/* Individual Service Card Style */
-.service-card {
+/* General Card Styling for all cards (Pro Series and other services) */
+.pro-series-card, .service-card {
     background-color: #1a1a1a;
     padding: 30px;
-    margin-bottom: 20px;
+    margin: 0 auto 40px; /* Center the card and add consistent bottom margin */
     text-align: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     width: 100%;
-    max-width: 700px;
+    max-width: 700px; /* Consistent width for all cards */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-.service-card:hover {
+/* Hover effects for all cards */
+.pro-series-card:hover, .service-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-.service-card h3 {
-    font-size: 1.8rem;
-    color: #ff6347;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 20px;
-}
-
-/* Pro Series Card (Already Styled) */
-.pro-series-card {
-    background-color: #1a1a1a;
-    padding: 30px;
-    margin-bottom: 40px;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+/* Consistent spacing for the service section */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 30px;
 }
 
-.pro-series-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh; /* Full-screen height */
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.pro-series-card h3 {
-    font-size: 1.8rem;
-    color: #ff6347;
-    margin-bottom: 15px;
-}
-
-.pro-series-card p {
-    font-size: 1rem;
-    color: #bbb;
+#header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
     margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #e5533b;
+    transform: scale(1.05);
 }
