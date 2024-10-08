@@ -1,12 +1,47 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: #000; 
+    scroll-behavior: smooth;
+}
+
 /* Hero Section with Parallax */
 #hero {
     position: relative;
     height: 100vh;
-    background-image: url('your-background-image.jpg');
+    background-image: url('images/your-background-image.jpg'); /* Replace with your image path */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay opacity */
 }
 
 /* Navigation Bar */
@@ -14,7 +49,8 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 2;
 }
 
 .nav-links {
@@ -39,6 +75,49 @@ nav {
     color: #ff6347;
 }
 
+/* Header Content */
+#header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+/* Buttons */
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1;
+}
+
+.btn:hover {
+    background-color: #e5533b;
+    transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ff6347;
+    letter-spacing: 1px;
+}
+
 /* Services Section */
 .services {
     display: grid;
@@ -60,6 +139,20 @@ nav {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+.service-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff6347;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #bbb;
+}
+
+/* Service Card Button */
 .service-card .btn {
     margin-top: 15px;
     display: inline-block;
@@ -75,4 +168,195 @@ nav {
 .service-card .btn:hover {
     background-color: #e5533b;
     transform: scale(1.05);
+}
+
+/* Slider Section */
+#slider {
+    padding: 50px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+#slider h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ff6347;
+    letter-spacing: 1px;
+}
+
+.ba-slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ba-slider img {
+    width: 48%;
+    margin: 1%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.ba-slider img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ff6347;
+    letter-spacing: 1px;
+}
+
+#testimonial-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#testimonial-container p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#testimonial-author {
+    font-size: 1rem;
+    color: #ff6347;
+    letter-spacing: 0.5px;
+}
+
+#next-testimonial-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#next-testimonial-button:hover {
+    background-color: #e5533b;
+    transform: scale(1.05);
+}
+
+/* Payment Section */
+#payment {
+    padding: 50px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+#payment h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ff6347;
+    letter-spacing: 1px;
+}
+
+#card-element {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#payment-form .btn {
+    margin-top: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ff6347;
+    letter-spacing: 1px;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 10px #ff6347;
+    transform: scale(1.02);
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #e5533b;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+footer .social-media {
+    margin-bottom: 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    color: #777;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
