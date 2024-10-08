@@ -1,87 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Intelliai Marketing</title>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-color: #121212; /* Elegant black background */
-            color: #C0C0C0; /* Silver writing */
-            font-family: 'Roboto', sans-serif;
-        }
-        /* General Card Styling for all cards (Pro Series and other services) */
-        .pro-series-card, .service-card {
-            background-color: #1a1a1a;
-            padding: 30px;
-            margin: 0 auto 40px; /* Center the card and add consistent bottom margin */
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            width: 100%;
-            max-width: 700px; /* Consistent width for all cards */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-        }
+/* Body Styling */
+body {
+    background-color: #121212; /* Elegant black background */
+    color: #C0C0C0; /* Silver writing */
+    font-family: 'Roboto', sans-serif;
+}
 
-        /* Hover effects for all cards */
-        .pro-series-card:hover, .service-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-        }
+/* Header Styling */
+h1, h2, h3, p, a {
+    color: #C0C0C0; /* Silver text for readability */
+}
 
-        /* Consistent spacing for the service section */
-        .services {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            gap: 30px;
-        }
+/* Adjust header text visibility */
+#header-content h1 {
+    color: #ffffff; /* White for more contrast */
+}
 
-        /* Hero Section */
-        #hero {
-            position: relative;
-            height: 100vh; /* Full-screen height */
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+/* General Card Styling */
+.pro-series-card, .service-card {
+    background-color: #1a1a1a;
+    color: #C0C0C0; /* Silver writing inside cards */
+    padding: 30px;
+    margin: 0 auto 40px; /* Center the card and add consistent bottom margin */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px; /* Consistent width for all cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
 
-        #header-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: #fff;
-            margin-bottom: 20px;
-        }
+/* Hover effects for all cards */
+.pro-series-card:hover, .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
 
-        .btn {
-            padding: 10px 20px;
-            background-color: #ff6347;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh; /* Full-screen height */
+    background-color: #121212; /* Same elegant black */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        .btn:hover {
-            background-color: #e5533b;
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body>
-    <section id="thank-you">
-        <div class="container">
-            <h1>Thank You for Getting in Touch!</h1>
-            <p>Your message has been successfully submitted. We will get back to you shortly.</p>
-            <a href="/" class="btn">Return to Homepage</a>
-        </div>
-    </section>
-</body>
-</html>
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #e5533b;
+    transform: scale(1.05);
+}
