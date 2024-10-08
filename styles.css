@@ -1,10 +1,10 @@
 /* General Card Styling for all cards (Pro Series and other services) */
 .pro-series-card, .service-card, .content-card {
-    background-color: #1a1a1a;
+    background: linear-gradient(145deg, #1a1a1a, #000000);
     padding: 30px;
-    margin: 0 auto 40px; /* Center the card and add consistent bottom margin */
+    margin: 20px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
     border-radius: 10px;
     width: 100%;
     max-width: 700px; /* Consistent width for all cards */
@@ -14,7 +14,7 @@
 /* Hover effects for all cards */
 .pro-series-card:hover, .service-card:hover, .content-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
 }
 
 /* Consistent spacing for the service section */
@@ -30,40 +30,58 @@
 #hero {
     position: relative;
     height: 100vh; /* Full-screen height */
-    background-color: #000;
+    overflow: hidden; /* Ensure content doesn't spill over */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end; /* Align items to the right */
     align-items: center;
-    text-align: center;
+    text-align: right; /* Align text to the right */
+    padding-right: 50px; /* Adjust as needed for spacing */
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place video behind content */
+    object-fit: cover; /* Cover the entire section */
+    filter: brightness(50%); /* Dim the video for text readability */
+}
+
+#header-content, #book-now-button {
+    position: relative;
+    z-index: 2; /* Ensure content is above the video */
 }
 
 #header-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #C0C0C0; /* Silver writing */
+    font-size: 4rem;
+    color: #FFFFFF; /* White text for contrast */
     margin-bottom: 20px;
 }
 
 body {
-    background-color: #121212; /* Elegant black background */
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a); /* Gradient background */
     color: #C0C0C0; /* Silver writing */
     font-family: 'Roboto', sans-serif;
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: #1a1a1a; /* Black button */
+    background: linear-gradient(145deg, #1a1a1a, #000000);
     color: #C0C0C0; /* Silver writing */
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
-    border: 1px solid #C0C0C0; /* Silver border */
-    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    box-shadow: 5px 5px 10px #0d0d0d, -5px -5px 10px #262626;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-    background-color: #000; /* Black background on hover */
+    background: linear-gradient(145deg, #000000, #1a1a1a);
+    box-shadow: inset 5px 5px 10px #0d0d0d, inset -5px -5px 10px #262626;
     transform: scale(1.05);
 }
 
@@ -77,8 +95,8 @@ p, h2, h3, a {
     margin: 0 auto;
     padding: 40px;
     text-align: center;
-    background-color: #1a1a1a;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
     border-radius: 10px;
 }
 
@@ -95,16 +113,42 @@ p, h2, h3, a {
 /* Card Styling for Specific Content */
 .content-card {
     padding: 40px;
-    background-color: #1a1a1a;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
     border-radius: 10px;
     text-align: center;
 }
 
 /* Ensure Sections are Properly Spaced and Formatted */
 section {
-    margin: 60px auto;
-    max-width: 900px;
+    margin: 100px auto; /* Increased margin for better spacing */
+    max-width: 1200px;
+    padding: 0 20px; /* Added padding for better spacing on smaller screens */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px; /* Added margin below headings */
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
@@ -118,4 +162,20 @@ section {
         width: 45%;
         margin-bottom: 20px;
     }
+}
+
+footer {
+    background-color: #0d0d0d;
+    padding: 40px 0;
+    text-align: center;
+    color: #C0C0C0;
+}
+
+footer .social-media {
+    margin-bottom: 20px;
+}
+
+footer .social-media a img {
+    width: 30px;
+    margin: 0 10px;
 }
