@@ -35,10 +35,3 @@ self.addEventListener('activate', (event) => {
 });
 
 // Fetch cached files or get them from the network if not cached
-self.addEventListener('fetch', (event) => {
-    event.respondWith(
-        caches.match(event.request).then((response) => {
-            return response || fetch(event.request);
-        })
-    );
-});
