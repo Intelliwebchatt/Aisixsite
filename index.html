@@ -7,27 +7,42 @@
     <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
     <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
     <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Swiper CSS for Slider -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Chatbot Integration Placeholder -->
     <script>
-        // Placeholder for chatbot integration
         var botId = 36738;
         // Insert chatbot script here
     </script>
 
+    <!-- Hero Section with Parallax Effect -->
     <section id="hero">
         <div class="hero-overlay"></div> 
+        <!-- Enhanced Header with Navigation -->
         <header id="header-content" data-aos="fade-down" data-aos-duration="1500">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
             <h1>Intelliai Marketing</h1> 
         </header>
         <a href="#contact" class="btn" id="book-now-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Book Now</a>
     </section>
 
+    <!-- Services Section with Cards -->
     <section id="about">
         <div class="container">
             <h2 data-aos="fade-in">Our Services</h2>
@@ -36,9 +51,11 @@
                     <h3>Custom Websites for Luxury Brands</h3>
                     <p>Bespoke web development tailored to your luxury brand's needs.</p>
                 </div>
+                <!-- Intelliai Pro Series Card -->
                 <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <h3>Pre-designed Landing Pages</h3>
-                    <p>Proven pre-built sites customized with your branding.</p>
+                    <h3>Intelliai Pro Series</h3>
+                    <p>Pre-designed websites branded for you, complete with a custom chatbot to kickstart your online business.</p>
+                    <a href="https://intelliaipro.com" class="btn">Learn More</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <h3>Advanced Chatbots</h3>
@@ -56,23 +73,26 @@
         </div>
     </section>
 
+    <!-- Slider Section -->
     <section id="slider" data-aos="fade-in">
         <h2>Our Transformations</h2>
         <div class="ba-slider">
-            <img src="images/before-placeholder.jpg" alt="Website before redesign" style="width: 48%;">
-            <img src="images/after-placeholder.jpg" alt="Website after redesign" style="width: 48%;">
+            <img src="images/before-placeholder.jpg" alt="Website before redesign">
+            <img src="images/after-placeholder.jpg" alt="Website after redesign">
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials">
         <h2>What Our Clients Say</h2>
         <div id="testimonial-container">
             <p id="testimonial-text">"Intelliai Marketing revolutionized our online presence with a stunning website."</p>
             <h4 id="testimonial-author">- Luxury Brand CEO</h4>
         </div>
-        <button onclick="nextTestimonial()">Next</button>
+        <button id="next-testimonial-button">Next</button>
     </section>
 
+    <!-- Payment Section -->
     <section id="payment" data-aos="fade-in">
         <h2>Secure Payment</h2>
         <form id="payment-form">
@@ -81,6 +101,7 @@
         </form>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" data-aos="fade-in">
         <h2>Get in Touch</h2>
         <form action="#" method="POST">
@@ -91,42 +112,30 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="social-media">
-            <a href="https://www.facebook.com/yourprofile" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="https://www.twitter.com/yourprofile" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/yourprofile" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook logo">
+            </a>
+            <a href="https://www.twitter.com/yourprofile" aria-label="Twitter">
+                <img src="images/twitter.png" alt="Twitter logo">
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn logo">
+            </a>
         </div>
         <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Placeholder for chatbot integration
-        var botId = 36738;
-        // Insert chatbot script here
-    </script>
+    <!-- External Scripts -->
+    <!-- Swiper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
+    <!-- Stripe JS -->
     <script src="https://js.stripe.com/v3/"></script>
+    <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Script -->
     <script src="scripts.js"></script> 
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        let testimonials = [
-            { text: "Intelliai Marketing revolutionized our online presence with a stunning website.", author: "- Luxury Brand CEO" },
-            { text: "Their advanced chatbot increased our customer engagement by 50%.", author: "- E-commerce Director" }
-        ];
-
-        let currentTestimonial = 0;
-
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            document.getElementById("testimonial-text").innerText = testimonials[currentTestimonial].text;
-            document.getElementById("testimonial-author").innerText = testimonials[currentTestimonial].author;
-        }
-    </script>
 </body>
 </html>
