@@ -1,53 +1,44 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    background-color: #000;
-    scroll-behavior: smooth;
-    min-height: 100vh;
-}
-
-/* Hero Section */
-#hero {
-    position: relative;
-    min-height: 100vh;
-    background-color: #000;
-    overflow: visible; /* Ensure content is visible */
-    display: -webkit-box;
-    display: -ms-flexbox;
+/* Service Cards */
+.services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0 10px;
 }
 
-/* About Section */
-#about {
-    min-height: 100vh;  /* Ensure enough height */
-    background-color: #111;
+/* Individual Service Card Style */
+.service-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    margin-bottom: 20px;
     text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-/* Contact Section */
-#contact {
-    min-height: 100vh;  /* Ensure enough height */
-    background-color: #111;
-    text-align: center;
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-/* Pro Series Card */
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Pro Series Card (Already Styled) */
 .pro-series-card {
     background-color: #1a1a1a;
     padding: 30px;
@@ -77,108 +68,4 @@ body {
     font-size: 1rem;
     color: #bbb;
     margin-bottom: 20px;
-}
-
-/* Service Cards */
-.services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.service-card {
-
-.service-card {
-    background-color: #1a1a1a;
-    padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ff6347;
-}
-
-.service-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #bbb;
-}
-
-/* Form Section */
-form input, form textarea {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1a1a1a;
-    color: #fff;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    box-shadow: 0 0 10px #ff6347;
-    transform: scale(1.02);
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: #fff;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-form button:hover {
-    background-color: #e5533b;
-    transform: scale(1.05);
-}
-
-/* Footer Section */
-footer {
-    z-index: 1;
-    padding: 20px;
-    background-color: #111;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer .social-media {
-    margin-top: 10px;
-}
-
-footer .social-media img {
-    width: 40px;
-    height: 40px;
-    margin: 0 15px;
-    transition: transform 0.3s ease-in-out;
-}
-
-footer .social-media img:hover {
-    transform: scale(1.2);
-}
-
-footer p {
-    color: #ccc;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
 }
