@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Initialize AOS animations
     AOS.init({
         duration: 2000,  // Duration of animations for luxury feel
         once: true       // Only animate elements once as they enter the viewport
     });
 
+    // Testimonials Data
     let testimonials = [
         { text: "Intelliai Marketing revolutionized our online presence with a stunning website.", author: "- Luxury Brand CEO" },
         { text: "Their advanced chatbot increased our customer engagement by 50%.", author: "- E-commerce Director" },
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector("#next-testimonial-button").addEventListener("click", nextTestimonial);
 
-    // Add smooth scrolling for internal links
+    // Smooth Scrolling for Internal Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Initialize Stripe Payment Form
-    var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX');
+    var stripe = Stripe('pk_test_your_public_key_here'); // Replace with your public key
     var elements = stripe.elements();
 
     var style = {
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Fancy animation for buttons
+    // Fancy Animation for Buttons
     document.querySelectorAll(".btn, button").forEach(button => {
         button.addEventListener('mouseover', function() {
             this.style.boxShadow = '0 15px 25px rgba(255, 215, 0, 0.6)';
