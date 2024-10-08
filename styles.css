@@ -1,24 +1,6 @@
-/* Body Styling */
-body {
-    background-color: #121212; /* Elegant black background */
-    color: #C0C0C0; /* Silver writing */
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Header Styling */
-h1, h2, h3, p, a {
-    color: #C0C0C0; /* Silver text for readability */
-}
-
-/* Adjust header text visibility */
-#header-content h1 {
-    color: #ffffff; /* White for more contrast */
-}
-
-/* General Card Styling */
+/* General Card Styling for all cards (Pro Series and other services) */
 .pro-series-card, .service-card {
     background-color: #1a1a1a;
-    color: #C0C0C0; /* Silver writing inside cards */
     padding: 30px;
     margin: 0 auto 40px; /* Center the card and add consistent bottom margin */
     text-align: center;
@@ -35,11 +17,20 @@ h1, h2, h3, p, a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
+/* Consistent spacing for the service section */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
 /* Hero Section */
 #hero {
     position: relative;
     height: 100vh; /* Full-screen height */
-    background-color: #121212; /* Same elegant black */
+    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,18 +38,35 @@ h1, h2, h3, p, a {
     text-align: center;
 }
 
-/* Buttons */
+#header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #C0C0C0; /* Silver writing */
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #121212; /* Elegant black background */
+    color: #C0C0C0; /* Silver writing */
+    font-family: 'Roboto', sans-serif;
+}
+
 .btn {
     padding: 10px 20px;
-    background-color: #ff6347;
-    color: #fff;
+    background-color: #1a1a1a; /* Black button */
+    color: #C0C0C0; /* Silver writing */
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
+    border: 1px solid #C0C0C0; /* Silver border */
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #e5533b;
+    background-color: #000; /* Black background on hover */
     transform: scale(1.05);
+}
+
+p, h2, h3, a {
+    color: #C0C0C0; /* Silver writing for all text elements */
 }
