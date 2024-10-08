@@ -53,6 +53,10 @@
 
     <!-- Hero Section -->
     <section id="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="videos/eyes.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <header id="header-content" data-aos="fade-down" data-aos-duration="1500">
             <h1>Intelliai Marketing</h1> 
         </header>
@@ -95,31 +99,37 @@
 
     <!-- Before/After Slider Section -->
     <section id="slider" data-aos="fade-in">
-        <h2>Our Transformations</h2>
-        <div class="ba-slider">
-            <img src="images/before-placeholder.jpg" alt="Website before redesign" style="width: 48%;">
-            <img src="images/after-placeholder.jpg" alt="Website after redesign" style="width: 48%;">
+        <div class="container">
+            <h2>Our Transformations</h2>
+            <div class="ba-slider">
+                <img src="images/before-placeholder.jpg" alt="Website before redesign" style="width: 48%;">
+                <img src="images/after-placeholder.jpg" alt="Website after redesign" style="width: 48%;">
+            </div>
         </div>
     </section>
 
     <!-- Payment Section -->
     <section id="payment" data-aos="fade-in">
-        <h2>Secure Payment</h2>
-        <form id="payment-form">
-            <div id="card-element"></div>
-            <button type="submit" class="btn">Pay Now</button>
-        </form>
+        <div class="container">
+            <h2>Secure Payment</h2>
+            <form id="payment-form">
+                <div id="card-element"></div>
+                <button type="submit" class="btn">Pay Now</button>
+            </form>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Get in Touch</h2>
-        <form action="/thank-you" method="POST" data-netlify="true">
-            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
-            <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
-            <button type="submit" class="btn">Submit</button>
-        </form>
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form action="/thank-you" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+                <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -194,17 +204,17 @@
     <script>
         document.querySelectorAll(".btn, button").forEach(button => {
             button.addEventListener('mouseover', function() {
-                this.style.boxShadow = '0 15px 25px rgba(255, 215, 0, 0.6)';
+                this.style.boxShadow = '10px 10px 20px #0d0d0d, -10px -10px 20px #262626';
             });
             button.addEventListener('mouseout', function() {
-                this.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.4)';
+                this.style.boxShadow = '5px 5px 10px #0d0d0d, -5px -5px 10px #262626';
             });
         });
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="scripts.js"></script>
+    <!-- Initialize AOS -->
     <script>
         AOS.init({
             duration: 1000,
