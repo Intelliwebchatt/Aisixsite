@@ -1,5 +1,5 @@
 /* General Card Styling for all cards (Pro Series and other services) */
-.pro-series-card, .service-card {
+.pro-series-card, .service-card, .content-card {
     background-color: #1a1a1a;
     padding: 30px;
     margin: 0 auto 40px; /* Center the card and add consistent bottom margin */
@@ -12,7 +12,7 @@
 }
 
 /* Hover effects for all cards */
-.pro-series-card:hover, .service-card:hover {
+.pro-series-card:hover, .service-card:hover, .content-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
@@ -69,4 +69,53 @@ body {
 
 p, h2, h3, a {
     color: #C0C0C0; /* Silver writing for all text elements */
+}
+
+/* Centering the Header Card on All Devices */
+.header-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* Transformations, Secure Payment, Contact Page, and Referrals Section */
+.transformations, .secure-payment, .contact-page, .referrals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    margin: 40px auto;
+}
+
+/* Card Styling for Specific Content */
+.content-card {
+    padding: 40px;
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Ensure Sections are Properly Spaced and Formatted */
+section {
+    margin: 60px auto;
+    max-width: 900px;
+}
+
+@media (min-width: 768px) {
+    .services, .transformations, .secure-payment, .contact-page, .referrals {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .content-card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
 }
