@@ -7,6 +7,7 @@ const FILES_TO_CACHE = [
     '/images/favicon.png',
     '/images/before-placeholder.jpg',
     '/images/after-placeholder.jpg',
+    '/videos/eyes.mp4',
     'https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap'
 ];
 
