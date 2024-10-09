@@ -194,10 +194,12 @@
     <script>
         document.querySelectorAll(".btn, button").forEach(button => {
             button.addEventListener('mouseover', function() {
-                this.style.boxShadow = '0 15px 25px rgba(255, 215, 0, 0.6)';
+                this.style.boxShadow = '0 15px 25px rgba(0, 255, 255, 0.6)';
+                this.style.background = 'linear-gradient(145deg, #00008b, #4682b4)';
             });
             button.addEventListener('mouseout', function() {
                 this.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.4)';
+                this.style.background = 'linear-gradient(145deg, #1a1a1a, #000000)';
             });
         });
     </script>
