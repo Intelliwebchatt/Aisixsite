@@ -1,7 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... [unchanged head content] ... -->
+    <meta charset="UTF-8">
+    <title>Intelliai Marketing - Digital Marketing & SEO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
+    <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
+
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');  // Replace with your actual GA Tracking ID
+    </script>
+
+    <!-- OneSignal Push Notification Integration -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "YOUR-ONESIGNAL-APP-ID", // Replace with OneSignal App ID
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
+
+    <!-- Register Service Worker for Caching -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registered with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -98,7 +144,46 @@
 
     <!-- Stripe Payment Gateway Script -->
     <script src="https://js.stripe.com/v3/"></script>
-    <!-- [Stripe script remains the same] -->
+    <script>
+        var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your own public Stripe key
+        var elements = stripe.elements();
+
+        var style = {
+            base: {
+                color: '#c0c0c0',
+                fontFamily: '"Open Sans", sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#888',
+                },
+                backgroundColor: '#1a1a1a',
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a',
+            },
+        };
+
+        var card = elements.create('card', { style: style });
+        card.mount('#card-element');
+
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function (result) {
+                if (result.error) {
+                    // Display error.message in your UI
+                    alert(result.error.message);
+                } else {
+                    // Send the token to your server
+                    // Placeholder for server integration
+                    alert('Payment successful! Token ID: ' + result.token.id);
+                }
+            });
+        });
+    </script>
 
     <!-- Smooth Scrolling for Internal Links -->
     <script>
