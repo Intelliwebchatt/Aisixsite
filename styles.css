@@ -1,32 +1,15 @@
-/* General Card Styling for all cards (Pro Series and other services) */
-.pro-series-card, .service-card, .content-card {
-    background: linear-gradient(145deg, #1a1a1a, #000000);
-    padding: 30px;
-    margin: 20px auto; /* Center the cards */
-    text-align: center;
-    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 700px; /* Consistent width for all cards */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-}
+/* General Styles */
 
-/* Hover effects for all cards */
-.pro-series-card:hover, .service-card:hover, .content-card:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
-}
-
-/* Consistent spacing for the service section */
-.services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 30px;
+body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a); /* Gradient background */
+    color: #C0C0C0; /* Silver writing */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hero Section */
+
 #hero {
     position: relative;
     height: 100vh; /* Full-screen height */
@@ -36,7 +19,6 @@
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     text-align: center; /* Center text */
-    padding: 0 20px; /* Horizontal padding */
 }
 
 #hero-image {
@@ -50,7 +32,7 @@
     filter: brightness(50%); /* Adjust as needed */
 }
 
-#header-content, #book-now-button {
+#header-content {
     position: relative;
     z-index: 2; /* Ensure content is above the background */
 }
@@ -62,11 +44,13 @@
     margin-bottom: 20px;
 }
 
-body {
-    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a); /* Gradient background */
-    color: #C0C0C0; /* Silver writing */
-    font-family: 'Roboto', sans-serif;
+#book-now-button {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
 }
+
+/* Buttons */
 
 .btn {
     padding: 10px 20px;
@@ -86,57 +70,20 @@ body {
     transform: scale(1.05);
 }
 
-p, h2, h3, a {
-    color: #C0C0C0; /* Silver writing for all text elements */
-}
+/* Sections */
 
-/* Centering the Header Card on All Devices */
-.header-card {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px;
-    text-align: center;
-    background: linear-gradient(145deg, #1a1a1a, #000000);
-    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
-    border-radius: 10px;
-}
-
-/* Transformations, Secure Payment, Contact Page, and Referrals Section */
-.transformations, .secure-payment, .contact-page, .referrals {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 30px;
-    margin: 40px auto;
-}
-
-/* Card Styling for Specific Content */
-.content-card {
-    padding: 40px;
-    background: linear-gradient(145deg, #1a1a1a, #000000);
-    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* Ensure Sections are Properly Spaced and Formatted */
 section {
-    margin: 80px auto;
-    max-width: 1200px;
-    padding: 0 20px; /* Added padding for better spacing on smaller screens */
-}
-
-.container {
-    width: 100%;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Headings */
 
 h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 40px; /* Added margin below headings */
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -144,41 +91,84 @@ h3 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 p {
     font-size: 1.1rem;
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Before/After Slider Styling */
-#slider .ba-slider {
+/* Cards */
+
+.pro-series-card, .service-card {
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+    padding: 30px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.pro-series-card:hover, .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .services {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 45%;
+        margin: 20px;
+    }
+}
+
+/* Before/After Slider */
+
+.ba-slider {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-#slider .ba-slider img {
+.ba-slider img {
     width: 45%;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Payment Section Styling */
+/* Payment Form */
+
 #payment form {
     max-width: 500px;
     margin: 0 auto;
 }
 
-#payment #card-element {
+#card-element {
     background-color: #1a1a1a;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-/* Contact Section Styling */
+/* Contact Form */
+
 #contact form {
     max-width: 600px;
     margin: 0 auto;
@@ -198,23 +188,7 @@ p {
     color: #888;
 }
 
-@media (min-width: 768px) {
-    .services {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center; /* Center the services */
-    }
-
-    .service-card {
-        width: 45%;
-        margin: 20px;
-    }
-
-    .content-card {
-        width: 45%;
-        margin: 20px;
-    }
-}
+/* Footer */
 
 footer {
     background-color: #0d0d0d;
