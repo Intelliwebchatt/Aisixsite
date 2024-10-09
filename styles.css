@@ -1,3 +1,8 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
 /* General Styles */
 
 body {
@@ -6,6 +11,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Hero Section */
@@ -78,6 +89,16 @@ section {
     padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Container Class */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Headings */
@@ -111,7 +132,7 @@ p {
     text-align: center;
     box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #262626;
     border-radius: 10px;
-    width: 100%;
+    width: calc(100% - 40px); /* Account for padding/margin */
     max-width: 700px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
@@ -125,7 +146,10 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -136,7 +160,7 @@ p {
     }
 
     .service-card {
-        width: 45%;
+        width: calc(50% - 40px); /* Adjust width for spacing */
         margin: 20px;
     }
 }
