@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelliai Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero-blog" class="parallax">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Latest Insights from Intelliai</h1>
+        </div>
+    </section>
+
+    <!-- Featured Post Section -->
+    <section id="featured-post">
+        <div class="featured-post-container">
+            <div class="featured-image" style="background-image: url('images/featured-post.jpg');"></div>
+            <div class="featured-content">
+                <h2>How AI is Transforming Luxury Marketing</h2>
+                <p>Explore how artificial intelligence is reshaping the strategies of luxury brands...</p>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masonry Blog Grid -->
+    <section id="blog-grid">
+        <h2>Latest Articles</h2>
+        <div class="masonry-grid">
+            <div class="grid-item" data-aos="fade-up">
+                <img src="images/blog1.jpg" alt="Blog Post 1">
+                <h3>The Future of Chatbots in E-commerce</h3>
+                <p>How chatbots are driving sales and customer engagement...</p>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/blog2.jpg" alt="Blog Post 2">
+                <h3>AI's Impact on Data-Driven Marketing</h3>
+                <p>Unlocking the potential of data through AI-driven insights...</p>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+            <!-- More blog posts... -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
