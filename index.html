@@ -7,13 +7,21 @@
     <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
     <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
     <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
 
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Google Analytics Tracking Code -->
+    <!-- Replace 'G-XXXXXXXXXX' with your actual GA Tracking ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,30 +31,18 @@
     </script>
 
     <!-- OneSignal Push Notification Integration -->
+    <!-- Replace 'YOUR-ONESIGNAL-APP-ID' with your actual OneSignal App ID -->
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
             OneSignal.init({
-                appId: "YOUR-ONESIGNAL-APP-ID", // Replace with OneSignal App ID
+                appId: "YOUR-ONESIGNAL-APP-ID", // Replace with your OneSignal App ID
                 notifyButton: {
                     enable: true,
                 },
             });
         });
-    </script>
-
-    <!-- Register Service Worker for Caching -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                    console.log('ServiceWorker registered with scope: ', registration.scope);
-                }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
     </script>
 </head>
 <body>
@@ -55,7 +51,7 @@
     <section id="hero">
         <img src="images/eyes.jpg" alt="Eyes" id="hero-image">
         <header id="header-content" data-aos="fade-down" data-aos-duration="1500">
-            <h1>Intelliai Marketing</h1> 
+            <h1>Intelliai Marketing</h1>
         </header>
         <a href="#contact" class="btn" id="book-now-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Book Now</a>
     </section>
@@ -143,6 +139,7 @@
     <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="36919"></script>
 
     <!-- Stripe Payment Gateway Script -->
+    <!-- Replace 'pk_test_XXXXXXXXXXXXXXXXXXXXXXXX' with your actual Stripe public key -->
     <script src="https://js.stripe.com/v3/"></script>
     <script>
         var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your own public Stripe key
@@ -209,7 +206,7 @@
         });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
+    <!-- AOS Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Initialize AOS -->
     <script>
@@ -218,5 +215,8 @@
             once: true
         });
     </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
 </body>
 </html>
