@@ -52,26 +52,19 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     background-color: #000;
+    position: relative;
     overflow: hidden;
 }
 
-#hero::before {
-    content: '';
+.hero-logo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: url('path/to/m-logo.jpg'); /* Replace with your image path */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
     opacity: 0.8;
     z-index: 1;
-    animation: heroFade 2s ease-in-out;
+    animation: fadeIn 2s ease-out;
 }
 
 #header-content {
@@ -82,7 +75,7 @@ h3 {
     border-radius: 10px;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    animation: contentFade 1.5s ease-out;
+    text-align: center;
 }
 
 /* Button Styles */
@@ -222,35 +215,13 @@ footer {
 }
 
 /* Animations */
-@keyframes heroFade {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -45%);
-    }
-    to {
-        opacity: 0.8;
-        transform: translate(-50%, -50%);
-    }
-}
-
-@keyframes contentFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
     to {
-        opacity: 1;
+        opacity: 0.8;
         transform: translateY(0);
     }
 }
@@ -282,8 +253,8 @@ footer {
         margin-bottom: 1rem;
     }
 
-    #hero::before {
-        background-size: 80% auto;
+    .hero-logo {
+        width: 90%;
     }
 
     #header-content {
