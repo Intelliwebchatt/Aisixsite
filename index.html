@@ -35,37 +35,14 @@
             });
         });
     </script>
-
-    <!-- Register Service Worker for Caching -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                    console.log('ServiceWorker registered with scope: ', registration.scope);
-                }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-    </script>
-<style>
-    .parallax {
-        background-image: url('eyes.gif');
-        min-height: 100vh;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
 </head>
 <body>
-
     <!-- Hero Section -->
-    <section id="hero" class="parallax">
-        <header id="header-content" data-aos="fade-down" data-aos-duration="1500">
-            <h1>Intelliai Marketing</h1> 
-        </header>
+    <section id="hero">
+        <img src="m-logo.jpg" alt="Intelliai M Logo" class="hero-logo">
+        <div id="header-content" data-aos="fade-down" data-aos-duration="1500">
+            <h1>Intelliai Marketing</h1>
+        </div>
         <a href="#contact" class="btn" id="book-now-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Book Now</a>
     </section>
 
@@ -142,81 +119,9 @@
         <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
     </footer>
 
-    <!-- Aminos AI Chatbot Integration -->
-    <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="36919"></script>
-
-    <!-- Stripe Payment Gateway Script -->
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-        var stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'); // Replace with your own public Stripe key
-        var elements = stripe.elements();
-
-        var style = {
-            base: {
-                color: '#c0c0c0',
-                fontFamily: '"Open Sans", sans-serif',
-                fontSmoothing: 'antialiased',
-                fontSize: '16px',
-                '::placeholder': {
-                    color: '#888',
-                },
-                backgroundColor: '#1a1a1a',
-            },
-            invalid: {
-                color: '#fa755a',
-                iconColor: '#fa755a',
-            },
-        };
-
-        var card = elements.create('card', { style: style });
-        card.mount('#card-element');
-
-        var form = document.getElementById('payment-form');
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            stripe.createToken(card).then(function (result) {
-                if (result.error) {
-                    // Display error.message in your UI
-                    alert(result.error.message);
-                } else {
-                    // Send the token to your server
-                    // Placeholder for server integration
-                    alert('Payment successful! Token ID: ' + result.token.id);
-                }
-            });
-        });
-    </script>
-
-    <!-- Smooth Scrolling for Internal Links -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-    <!-- Button Hover Effects -->
-    <script>
-        document.querySelectorAll(".btn, button").forEach(button => {
-            button.addEventListener('mouseover', function() {
-                this.style.boxShadow = '0 15px 25px rgba(0, 255, 255, 0.6)';
-                this.style.background = 'linear-gradient(145deg, #00008b, #4682b4)';
-            });
-            button.addEventListener('mouseout', function() {
-                this.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.4)';
-                this.style.background = 'linear-gradient(145deg, #1a1a1a, #000000)';
-            });
-        });
-    </script>
-
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="scripts.js"></script>
     <script>
         AOS.init({
             duration: 1000,
