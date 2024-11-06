@@ -3,130 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelliai Marketing - Digital Marketing & SEO</title>
-    <meta name="description" content="Intelliai Marketing offers custom websites for luxury brands, advanced chatbots, AI consulting, and the latest AI news and blogs.">
-    <meta name="keywords" content="Digital Marketing, SEO, Web Development, AI Consulting, Chatbots">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&family=Roboto:700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css" />
-
-    <!-- Google Analytics Tracking Code -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');  // Replace with your actual GA Tracking ID
-    </script>
-
-    <!-- OneSignal Push Notification Integration -->
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "YOUR-ONESIGNAL-APP-ID", // Replace with OneSignal App ID
-                notifyButton: {
-                    enable: true,
-                },
-            });
-        });
-    </script>
+    <title>Our Services - IntelliAI Pro</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="main.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <img src="m-logo.jpg" alt="Intelliai M Logo" class="hero-logo">
-        <div id="header-content" data-aos="fade-down" data-aos-duration="1500">
-            <h1>Intelliai Marketing</h1>
-        </div>
-        <a href="#contact" class="btn" id="book-now-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Book Now</a>
-    </section>
-
-    <!-- About / Services Section -->
-    <section id="about">
-        <div class="container">
-            <h2 data-aos="fade-in">Our Services</h2>
-
-            <!-- Intelliai Pro Series Card -->
-            <div class="pro-series-card" data-aos="fade-up" data-aos-duration="1000">
-                <h3>Intelliai Pro Series</h3>
-                <p>A basic landing page with a contact form and an advanced chatbot, branded to your business.</p>
-                <a href="https://intelliaipro.com" class="btn" target="_blank" rel="noopener noreferrer">Learn More</a>
-            </div>
-
-            <!-- Remaining Services wrapped in individual cards -->
-            <div class="services">
-                <div class="service-card" data-aos="fade-up" data-aos-duration="1000">
-                    <h3>Custom Websites for Luxury Brands</h3>
-                    <p>Bespoke web development tailored to your luxury brand's needs.</p>
+<body class="bg-gray-50 font-[Inter] text-gray-900">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/theainewspro/index.html" class="text-2xl font-bold hover:opacity-80 transition-opacity">
+                        <span class="text-blue-600">Intelli</span><span class="text-indigo-600">AI</span>
+                        <span class="text-gray-700">Pro</span>
+                    </a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <h3>Advanced Chatbots</h3>
-                    <p>Intelligent chatbots to enhance customer engagement.</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <h3>AI Consulting</h3>
-                    <p>Expert advice to leverage AI in your business strategies.</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <h3>AI Blog and News</h3>
-                    <p>Stay updated with the latest trends in AI technology.</p>
-                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="/theainewspro/news.html" class="text-gray-600 hover:text-blue-600">AI News</a>
+                    <a href="/theainewspro/blog.html" class="text-gray-600 hover:text-blue-600">Pro Blog</a>
+                    <a href="/theainewspro/concepts.html" class="text-blue-600 border-b-2 border-blue-600">AI Concepts</a>
+                    <a href="https://intelliaipro.com" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        Pro Series Access
+                    </a>
+                    <a href="https://intelliaimarketing.com"
+                       class="text-blue-600 hover:text-blue-800 font-medium"
+                       target="_blank">
+                        Digital Marketing
+                    </a>
+                </nav>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Before/After Slider Section -->
-    <section id="slider" data-aos="fade-in">
-        <h2>Our Transformations</h2>
-        <div class="ba-slider">
-            <img src="images/before-placeholder.jpg" alt="Website before redesign" style="width: 48%;">
-            <img src="images/after-placeholder.jpg" alt="Website after redesign" style="width: 48%;">
+    <!-- Header Section -->
+    <section id="hero" class="relative bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-24 text-center">
+            <h1 class="text-5xl font-bold mb-6">Empowering Your Business with AI Solutions</h1>
+            <p class="text-xl mb-8">Discover how IntelliAI Pro can revolutionize your digital presence.</p>
+            <a href="#services" class="btn">Explore Our Services</a>
         </div>
     </section>
 
-    <!-- Payment Section -->
-    <section id="payment" data-aos="fade-in">
-        <h2>Secure Payment</h2>
-        <form id="payment-form">
-            <div id="card-element"></div>
-            <button type="submit" class="btn">Pay Now</button>
-        </form>
-    </section>
+    <!-- Services Section -->
+    <main class="container mx-auto px-4 py-16">
+        <section id="services" class="mb-16">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card: Website Design & Advanced Chatbots -->
+                <a href="https://intelliaimarketing.com/website-design" class="service-card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Website Design & Advanced Chatbots</h3>
+                        <p class="text-gray-700 mb-6">Crafting state-of-the-art websites with integrated AI chatbots to enhance user engagement and drive conversions.</p>
+                        <span class="text-blue-600 font-medium">Learn More →</span>
+                    </div>
+                </a>
+                <!-- Service Card: Full-Service Digital Marketing & AI Consulting -->
+                <a href="https://intelliaimarketing.com/digital-marketing" class="service-card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Digital Marketing & AI Consulting</h3>
+                        <p class="text-gray-700 mb-6">Leveraging AI to optimize your marketing strategies, improve SEO, and increase ROI.</p>
+                        <span class="text-blue-600 font-medium">Discover How →</span>
+                    </div>
+                </a>
+                <!-- Service Card: IntelliAI News & Information Network -->
+                <a href="https://intelliwebchatt.github.io/theainewspro/index.html" class="service-card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">IntelliAI News & Information Network</h3>
+                        <p class="text-gray-700 mb-6">Stay informed with the latest AI news, trends, and insights from industry experts.</p>
+                        <span class="text-blue-600 font-medium">Read More →</span>
+                    </div>
+                </a>
+                <!-- Service Card: AI Training & Workshops -->
+                <a href="https://intelliaipro.com/training" class="service-card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">AI Training & Workshops</h3>
+                        <p class="text-gray-700 mb-6">Empower your team with the knowledge and skills to leverage AI technologies effectively.</p>
+                        <span class="text-blue-600 font-medium">Enroll Now →</span>
+                    </div>
+                </a>
+                <!-- Pro Series Card -->
+                <a href="https://intelliaipro.com" class="service-card pro-series-card">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">IntelliAI Pro Series Access</h3>
+                        <p class="text-gray-200 mb-6">Unlock premium content, advanced tutorials, and personalized support from AI professionals.</p>
+                        <span class="text-white font-medium">Get Access →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <form action="/thank-you" method="POST" data-netlify="true">
-            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
-            <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="social-media">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">Follow us on social media</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-white"><img src="icons/facebook.svg" alt="Facebook" class="w-6 h-6"></a>
+                <a href="#" class="hover:text-white"><img src="icons/twitter.svg" alt="Twitter" class="w-6 h-6"></a>
+                <a href="#" class="hover:text-white"><img src="icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6"></a>
+            </div>
+            <p>© 2024 IntelliAI Pro. All rights reserved.</p>
         </div>
-        <p>&copy; 2023 Intelliai Marketing. All rights reserved.</p>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
 </body>
 </html>
