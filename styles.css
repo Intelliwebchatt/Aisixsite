@@ -32,7 +32,7 @@ h3 {
 
 /* Hero Section */
 #hero {
-    background-image: url('images/ai-background.jpg');
+    background-image: url('/images/ai-background.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
